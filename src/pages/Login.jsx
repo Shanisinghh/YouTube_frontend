@@ -35,6 +35,7 @@ function Login() {
       })
       .then((res) => {
         dispatch(login(res.data));
+        console.log(res.data);
       })
       .catch((err) => {
         console.error("Error fetching user:", err);
@@ -53,6 +54,7 @@ function Login() {
           withCredentials: true,
         }
       );
+      console.log(response);
       setLoginPage(!loginPage);
       setLoginData({ email: "", password: "" });
       if (heading.current) {
