@@ -35,7 +35,7 @@ function UploadVideo() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/videos",
+        "https://youtube-backend-2g5b.onrender.com/api/videos",
         videoData,
         {
           headers: { "Content-Type": "application/json" },
