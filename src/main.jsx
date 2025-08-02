@@ -20,6 +20,7 @@ const UploadVideo = lazy(() => import("./pages/UplodeVideo.jsx"));
 const Video = lazy(() => import("./pages/VideoPlayer.jsx"));
 const UpdateVideo = lazy(() => import("./pages/UpdateVideo.jsx"));
 const UpdateChannel = lazy(() => import("./pages/UpdateChannel.jsx"));
+const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="/video/:videoId" element={<Video />} />
       <Route path="/updatevideo/:channelId" element={<UpdateVideo />} />
       <Route path="/updatechannel/:channelId" element={<UpdateChannel />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
