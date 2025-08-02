@@ -4,5 +4,17 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(),],
+  server: {
+    cors: {
+      origin: [
+        "http://localhost:5173",
+        "https://youtube-clone0114.netlify.app",
+        "https://youtube-clone-five-lac.vercel.app",
+      ],
+      credentials: true,
+    },
+  },
+
+  plugins: [react(), tailwindcss()],
 })
+
